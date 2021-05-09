@@ -6,9 +6,9 @@ const TechItem = ({tech}) => {
         <li className="collection-item">
             <div>
                 {firstName} {lastName}
-                <a href="#!" className="secondary-content">
-            <BsFillTrashFill className="text-grey"/>
-            </a>
+                    <a href="#!" className="secondary-content">
+                 <BsFillTrashFill className="text-grey"/>
+                    </a>
             </div> 
             
         </li>
