@@ -1,4 +1,4 @@
-import {ADD_LOGS, CLEAR_CURRENT, DELETE_LOG, GET_LOGS, LOGS_ERROR, SEARCH_LOG, SET_CURRENT, UPDATE_LOG} from '../actions/types';
+import {ADD_LOGS, CLEAR_CURRENT, DELETE_LOG, GET_LOGS, LOGS_ERROR, SEARCH_LOG, SET_CURRENT, SET_LOADING, UPDATE_LOG} from '../actions/types';
 const initialState = {
     logs: null,
     current: null,
@@ -21,7 +21,8 @@ export default(state = initialState, action)=>{
         case GET_LOGS:
             return{
                 ...state,
-                logs: preload
+                logs: preload,
+                loading: false
             }
 
         case SET_CURRENT:
@@ -60,6 +61,12 @@ export default(state = initialState, action)=>{
             return{
                 ...state,
                 logs:preload
+            }
+          
+        case SET_LOADING:
+            return{
+                ...state,
+                loading: true
             }
         default:
             return state

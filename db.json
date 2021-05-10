@@ -20,6 +20,56 @@
       "tech": "John Doe",
       "date": "2021-05-09T15:12:53.076Z",
       "id": 3
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 4
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 5
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 6
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 7
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 8
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 9
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 10
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 11
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 12
+    },
+    {
+      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
+      " store.dispatch.apply(store, arguments);\n        }": "",
+      "id": 13
     }
   ],
   "techs": [
