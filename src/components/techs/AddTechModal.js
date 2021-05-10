@@ -4,23 +4,23 @@ import {addTechs} from '../../actions/techActions';
 import M from 'materialize-css/dist/js/materialize';
 
 const AddTechModal = ({addTechs}) => {
-    const [firstname, setFirstname]= useState('');
-    const [lastname, setLastname] = useState('');
+    const [firstName, setFirstName]= useState('');
+    const [lastName, setLastName] = useState('');
 
     const onSubmit = ()=>{
-        if(firstname === '' || lastname === ''){
+        if(firstName === '' || lastName === ''){
             M.toast({html: 'Please enter a firtname and lastname'})
         }else{
            
             const newAdd ={
-                firstname,
-                lastname
+                firstName,
+                lastName
             }
             addTechs(newAdd);
             M.toast({html:'New technician added successfully'})
                //Clear fields
-               setFirstname('');
-               setLastname('')
+               setFirstName('');
+               setLastName('')
         }
     }
     return (
@@ -30,8 +30,8 @@ const AddTechModal = ({addTechs}) => {
 
                 <div className="row">
                     <div className="input-field">
-                        <input type="text" name="firstname" value={firstname} onChange={e=>setFirstname(e.target.value)}/>
-                        <label htmlFor="firstname" className="active">
+                        <input type="text" name="firstName" value={firstName} onChange={e=>setFirstName(e.target.value)}/>
+                        <label htmlFor="firstName" className="active">
                             Log first Name
                         </label>
                     </div>
@@ -39,8 +39,8 @@ const AddTechModal = ({addTechs}) => {
                 
                 <div className="row">
                     <div className="input-field">
-                        <input type="text" name="lastname" value={lastname} onChange={e=>setLastname(e.target.value)}/>
-                        <label htmlFor="lastname" className="active">
+                        <input type="text" name="lastName" value={lastName} onChange={e=>setLastName(e.target.value)}/>
+                        <label htmlFor="lastName" className="active">
                             Log last Name
                         </label>
                     </div>

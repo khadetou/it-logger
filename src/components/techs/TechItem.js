@@ -1,13 +1,19 @@
 import React from 'react';
 import { BsFillTrashFill } from "react-icons/bs";
-const TechItem = ({tech}) => {
-    const {firstName, lastName} = tech;
+import {connect} from 'react-redux';
+import {deleteTechs} from '../../actions/techActions';
+const TechItem = ({tech, deleteTechs}) => {
+    const {firstName, lastName, id} = tech;
+   console.log(tech)
+    const onDelete = ()=>{
+        deleteTechs(id)
+    }
     return (
         <li className="collection-item">
             <div>
                 {firstName} {lastName}
                     <a href="#!" className="secondary-content">
-                 <BsFillTrashFill className="text-grey"/>
+                 <BsFillTrashFill className="text-grey" onClick={onDelete}/>
                     </a>
             </div> 
             
@@ -15,4 +21,4 @@ const TechItem = ({tech}) => {
     )
 }
 
-export default TechItem;
+export default connect(null,{deleteTechs})(TechItem);

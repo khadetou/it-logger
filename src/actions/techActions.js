@@ -27,8 +27,9 @@ export const getTechs = () => async dispatch=>{
     try {
         setLoading()
         const {data} =  await axios.get('/techs');
+        
         dispatch({
-            type:   GET_TECHS,
+            type: GET_TECHS,
             preload: data
         })
     } catch (error) {
@@ -46,7 +47,7 @@ export const deleteTechs = (id) => async dispatch=>{
 
     try {
         setLoading()
-        await axios.delete(`/techs${id}`);
+        await axios.delete(`/techs/${id}`);
         dispatch({
             type:   DELETE_TECH,
             preload: id

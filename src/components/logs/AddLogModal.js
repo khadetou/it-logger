@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import {addLogs} from '../../actions/logAction';
+import TechSelectOptions from '../techs/TechSelectOptions';
 import M from 'materialize-css/dist/js/materialize';
 
 const AddLogModal = ({addLogs}) => {
@@ -43,10 +44,11 @@ const AddLogModal = ({addLogs}) => {
                 <div className="row">
                     <div className="input-field">
                         <select name="tech" value={tech} className="browser-default" onChange={e=>setTech(e.target.value)}>
-                            <option value="" disabled>Select Technician</option>
-                            <option value="John Doe">John Doe</option>
-                            <option value="Sam Smith">Sam Smith</option>
-                            <option value="Sarah Wilson">Sarah Wilson</option>
+                        <option value='' disabled>
+                            Select Technician
+                        </option>
+                        <TechSelectOptions/>
+
                         </select>
                     </div>
                 </div>
