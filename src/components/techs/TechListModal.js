@@ -1,21 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import TechItem from './TechItem';
-import axios from 'axios';
-const TechListModal = () => {
-    const [techs, setTechs]= useState([]);
-    const [loading, setLoading]= useState(false);
-
+import {connect} from 'react-redux';
+import {getTechs} from '../../actions/techActions';
+const TechListModal = ({tech:{techs, loading}, getTechs}) => {
     useEffect(()=>{
         getTechs();
         //eslint-disabled-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-    const getTechs = async()=>{
-        setLoading(true);
-        const {data} = await axios.get('/techs');
-        setTechs(data);
-        setLoading(false);
-    }
+   
 
     return (
       <div id="tech-list-modal" className="modal">
@@ -31,4 +25,7 @@ const TechListModal = () => {
     )
 }
 
-export default TechListModal;
+const mapStateToProps = state =>({
+    tech: state.tech
+})
+export default connect(mapStateToProps,{getTechs})(TechListModal);

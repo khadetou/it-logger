@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {searchLogs} from '../../actions/logAction';
 import { BsSearch } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
-const SearchBar = () => {
+const SearchBar = ({searchLogs}) => {
 
   const text = useRef('');
 
