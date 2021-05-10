@@ -8,107 +8,101 @@ export const addLogs = (log)=>async dispatch=>{
         const {data} = await axios.post('/logs',log);
         dispatch({
             type:  ADD_LOGS, 
-            prelaod: data
+            preload: data
         })
     }catch(error){
         dispatch({
             type: LOGS_ERROR,
-            prelaod: error.response
+            preload: error.response.data
         })
     }
 }
 
-const func = async ()=>{
-    const {data} = await axios.get('/logs');
-    console.log(data)
-}
 
 
 //GET LOGS
-export const getLogs = () => async dispatch=>{
+export const getLogs = () => async dispatch =>{
     try{
         setLoading();
         const {data} = await axios.get('/logs');
-        console.log(data)
-        
         dispatch({
-            type:  GET_LOGS, 
-            prelaod: data
+            type: GET_LOGS, 
+            preload: data
         })
     }catch(error){
         dispatch({
             type: LOGS_ERROR,
-            prelaod: error.response.data
+            preload: error.response.data
         })
     }
 }
 
-// //SET CURRENT 
-// export const setCurrent = (log)=>{
-//     return{
-//         type: SET_CURRENT,
-//         prelaod: log
-//     }
-// }
+//SET CURRENT 
+export const setCurrent = (log)=>{
+    return{
+        type: SET_CURRENT,
+        preload: log
+    }
+}
 
-// //UPDATE LOGS
-// export const updateLogs = (log)=>async dispatch=>{
-//     try{
-//         setLoading();
-//         const {data} = await axios.put(`/logs/${log.id}`,log);
-//         dispatch({
-//             type:  UPDATE_LOG, 
-//             prelaod: data
-//         })
-//     }catch(error){
-//         dispatch({
-//             type: LOGS_ERROR,
-//             prelaod: error.response.data
-//         })
-//     }
-// }
+//UPDATE LOGS
+export const updateLogs = (log)=>async dispatch=>{
+    try{
+        setLoading();
+        const {data} = await axios.put(`/logs/${log.id}`,log);
+        dispatch({
+            type:  UPDATE_LOG, 
+            preload: data
+        })
+    }catch(error){
+        dispatch({
+            type: LOGS_ERROR,
+            preload: error.response.data
+        })
+    }
+}
 
-// //CLEAR CURRENT
-// export const clearCurrent = ()=>{
-//     return{
-//         type: CLEAR_CURRENT
-//     }
-// }
+//CLEAR CURRENT
+export const clearCurrent = ()=>{
+    return{
+        type: CLEAR_CURRENT
+    }
+}
 
-// //DELETE CURRENT 
-// export const deleteLogs = (id)=>async dispatch=>{
-//     try{
-//         setLoading();
-//          await axios.delete(`/logs/${id}`);
-//         dispatch({
-//             type:  DELETE_LOG, 
-//             prelaod: id
-//         })
-//     }catch(error){
-//         dispatch({
-//             type: LOGS_ERROR,
-//             prelaod: error.response.data
-//         })
-//     }
-// }
+//DELETE CURRENT 
+export const deleteLogs = (id)=>async dispatch=>{
+    try{
+        setLoading();
+         await axios.delete(`/logs/${id}`);
+        dispatch({
+            type:  DELETE_LOG, 
+            preload: id
+        })
+    }catch(error){
+        dispatch({
+            type: LOGS_ERROR,
+            preload: error.response.data
+        })
+    }
+}
 
 
-// //SEARCH LOG
-// export const searchLogs = (text)=>async dispatch=>{
-//     try{
-//         setLoading();
-//         const {data}= await axios.delete(`/logs?q=${text}`);
-//         dispatch({
-//             type:  SEARCH_LOG, 
-//             prelaod: data
-//         })
-//     }catch(error){
-//         dispatch({
-//             type: LOGS_ERROR,
-//             prelaod: error.response.data
-//         })
-//     }
-// }
+//SEARCH LOG
+export const searchLogs = (text) => async dispatch=>{
+    try{
+        setLoading();
+        const {data}= await axios.get(`/logs?q=${text}`);
+        dispatch({
+            type: SEARCH_LOG, 
+            preload: data
+        })
+    }catch(error){
+        dispatch({
+            type: LOGS_ERROR,
+            preload: error.response.data
+        })
+    }
+}
 
 //Set Loading to true
 export const setLoading = ()=>{

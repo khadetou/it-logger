@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
+import {connect} from 'react-redux';
+import {updateLogs, clearCurrent} from '../../actions/logAction';
 import M from 'materialize-css/dist/js/materialize';
 
-const EditLogModal = () => {
+const EditLogModal = ({updateLogs, current, clearCurrent}) => {
     const [message, setMessage]= useState('');
     const [attention, setAttention] = useState(false);
     const [tech, setTech] = useState('');
@@ -11,7 +13,17 @@ const EditLogModal = () => {
             M.toast({html: 'Please enter a message and tech'})
         }else{
             console.log(message, attention, tech);
+            const newUpdate ={
+                id: current.id,
+                message,
+                attention, 
+                tech,
+                date: new Date()
+            }
 
+            updateLogs(newUpdate)
+            clearCurrent()
+            M.toast({html: 'Updated successfully'});
             //Clear fields
             setMessage('');
             setAttention(false);
@@ -67,5 +79,8 @@ const modalStyle ={
     width: '75%',
     heigth: '75%'
 }
+const mapStateToProps = state =>({
+    current: state.log.current
+})
 
-export default EditLogModal;
+export default connect(mapStateToProps, {updateLogs, clearCurrent})(EditLogModal);

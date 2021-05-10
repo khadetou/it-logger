@@ -10,13 +10,8 @@ const initialState = {
 export default(state = initialState, action)=>{
 
     const {preload, type} = action;
+
     switch(type){
-        case ADD_LOGS:
-            return {
-                ...state,
-                logs: [...state.logs, preload],
-                loading: false
-            }
 
         case GET_LOGS:
             return{
@@ -24,6 +19,16 @@ export default(state = initialState, action)=>{
                 logs: preload,
                 loading: false
             }
+
+
+        case ADD_LOGS:
+            return {
+                ...state,
+                logs: [...state.logs, preload],
+                loading: false
+            }
+
+       
 
         case SET_CURRENT:
             return{
@@ -34,7 +39,7 @@ export default(state = initialState, action)=>{
         case UPDATE_LOG:
             return{
                 ...state,
-                logs: state.logs.map(log=>log.id === preload.id? preload:log)
+                logs: state.logs.map(log =>log.id === preload.id? preload: log)
             }
         
         case CLEAR_CURRENT:

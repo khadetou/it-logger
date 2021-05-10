@@ -1,75 +1,25 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "serer boy diay lathjie heheehehe ",
+      "message": "Same petersen ",
+      "attention": false,
+      "tech": "Sam Smith",
+      "date": "2021-05-10T11:36:16.665Z",
+      "id": 1
+    },
+    {
+      "message": "wilim amod ",
       "attention": true,
-      "tech": "Sarah Wilson",
-      "date": "2021-05-09T13:45:33.355Z"
-    },
-    {
-      "id": 2,
-      "message": "Error on the engine center 0005",
-      "attention": false,
-      "tech": "Sarah Wilson",
-      "date": "2021-05-09T13:45:38.934Z"
-    },
-    {
-      "message": "A country that needs help nothing changes ",
-      "attention": false,
       "tech": "John Doe",
-      "date": "2021-05-09T15:12:53.076Z",
+      "date": "2021-05-10T11:36:35.048Z",
+      "id": 2
+    },
+    {
+      "message": "lett seee ",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2021-05-10T11:36:47.972Z",
       "id": 3
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 4
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 5
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 6
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 7
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 8
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 9
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 10
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 11
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 12
-    },
-    {
-      "function dispatch() {\n          return !window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__ ": "",
-      " store.dispatch.apply(store, arguments);\n        }": "",
-      "id": 13
     }
   ],
   "techs": [

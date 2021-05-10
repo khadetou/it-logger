@@ -1,21 +1,20 @@
-import React, {useEffect} from 'react';
+import React, {useEffect}  from 'react';
 import {connect} from 'react-redux';
 import {getLogs} from '../../actions/logAction';
 import LogItem from './LogItem';
 import Preloader from '../layout/Preloader';
 
-const Logs = ({log:{logs, loading}, getLogs}) => {
-    
-    console.log(logs)
-    useEffect(()=>{
-        getLogs();
-    
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+const Logs = ({log, getLogs}) => {
+    const{logs, loading} = log;
 
-  
+   useEffect(()=>{
+     getLogs()
+   
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+   },[])
 
-    if(loading){
+
+    if(loading || logs === null){
         return <Preloader/>
     }
 
